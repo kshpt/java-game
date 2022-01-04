@@ -9,13 +9,14 @@ public class startPanel extends JPanel {
 	private JButton startButton;
 	private ImageIcon startButtonImg = new ImageIcon("Images//gameStart.png");
 
+
 	public startPanel(PanelChange ch) {
 		this.ch = ch;
 		setLayout(null);
-		setPreferredSize(new Dimension(1920, 1080));
+		setPreferredSize(new Dimension(1280, 720));
 		startButton = new JButton("");
 		startButton.setIcon(startButtonImg);
-		startButton.setBounds(550, 320, 100, 60);
+		startButton.setBounds(550, 320, 175, 53);
 		add(startButton);
 		
 		startButton.addActionListener(new StartListener());
@@ -27,7 +28,7 @@ public class startPanel extends JPanel {
 	class StartListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == startButton) {
-				ch.change("tomainGame");
+				ch.change("tocharSel");
 				
 			
 			}
