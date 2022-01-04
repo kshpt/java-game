@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class char1Panel extends JPanel{
 	private PanelChange ch;
-	private JButton testBtn;
+	private JButton testBt;
 	public char1Panel (PanelChange ch) {
 		this.ch = ch;
 		setLayout(null); 
