@@ -10,7 +10,7 @@ public class Main {
 		PanelChange ch = new PanelChange();
 		ch.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		ch.setTitle("RPG 게임 만들기");
+		ch.setTitle("롤 턴제 RPG 게임 만들기");
 		ch.startPanel = new startPanel(ch);
 		ch.mainGame = new mainGame(ch);
 		ch.char1Panel = new char1Panel(ch);
