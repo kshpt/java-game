@@ -28,13 +28,26 @@ public class Azir {
 		}
 	}
 	public void Azir_Q() {
-		
+		ch.azir.MP -= 55;
+		ch.stagePanel.myMP.setText("MP : " + ch.azir.MP);
+		if(ch.fightSel.charidx == 0) {
+			ch.enemyAzir.HP -= 70;
+			ch.stagePanel.enemyHP.setText("HP : " + ch.enemyAzir.HP);
+		}
 		
 	}
 	public void Azir_W() {
 		
 	}
 	public void Azir_E() {
+		ch.azir.MP -= 60;
+		ch.stagePanel.myMP.setText("MP : " + ch.azir.MP);
+		ch.azir.HP += 40;
+		ch.stagePanel.myHP.setText("HP : " + ch.azir.HP);
+		if(ch.fightSel.charidx == 0) {
+			ch.enemyAzir.HP -= 30;
+			ch.stagePanel.enemyHP.setText("HP : " + ch.enemyAzir.HP);
+		}
 		
 	}
 	public void Azir_R() {
