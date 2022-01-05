@@ -7,4 +7,38 @@ public class Azir {
 	public int AttackSpeed = 1; //공속은 아지르 기준 1로 설정
 	public int AttackDamage = 52; //주문력과 공격력은 공격력으로 통일
 	public int Defense = 20; //방어력과 마저도 방어력으로 통일, 방어력은 방 + 마저 평균값
+	private PanelChange ch;
+	
+	public Azir(PanelChange ch) {
+		this.ch = ch;
+	}
+	
+	public void Azir_AD() {
+		if(ch.fightSel.charidx == 0) {
+			ch.enemyAzir.HP -= 52;
+			ch.stagePanel.enemyHP.setText("HP : " + ch.enemyAzir.HP);
+		}
+		else if(ch.fightSel.charidx == 1) {
+			ch.enemyRyze.HP -= 52;
+			ch.stagePanel.enemyHP.setText("HP : " + ch.enemyRyze.HP);
+		}
+		else if(ch.fightSel.charidx == 2) {
+			ch.enemyAkali.HP -= 52;
+			ch.stagePanel.enemyHP.setText("HP : " + ch.enemyAkali.HP);
+		}
+	}
+	public void Azir_Q() {
+		
+		
+	}
+	public void Azir_W() {
+		
+	}
+	public void Azir_E() {
+		
+	}
+	public void Azir_R() {
+	
+	}
+	
 }

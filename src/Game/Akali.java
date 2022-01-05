@@ -7,4 +7,9 @@ public class Akali {
 	public int AttackSpeed = 2; //공속은 아지르 기준 1로 설정
 	public int AttackDamage = 62; //주문력과 공격력은 공격력으로 통일
 	public int Defense = 30; //방어력과 마저도 방어력으로 통일, 방어력은 방 + 마저 평균값
+	private PanelChange ch;
+	
+	public Akali(PanelChange ch) {
+		this.ch = ch;
+	}
 }

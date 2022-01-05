@@ -1,10 +1,13 @@
 package Game;
 
 import javax.swing.*;
+
+import Game.charSel.StartListener;
+
 import java.awt.*;
 import java.awt.event.*;
 
-public class charSel extends JPanel {
+public class fightSel extends JPanel {
 	private PanelChange ch;
 	private JButton[] charbtn = new JButton[10];
 	public JLabel[] charlb = new JLabel[10];
@@ -13,7 +16,7 @@ public class charSel extends JPanel {
 	public int charidx = 0;
 
 	
-	public charSel(PanelChange ch) {
+	public fightSel(PanelChange ch) {
 		this.ch = ch;
 		setLayout(null);
 		charImg[0] = new ImageIcon("Images//Azir.png");
@@ -44,12 +47,12 @@ public class charSel extends JPanel {
 			add(charbtn[i]);
 			add(charlb[i]);
 		}
-		/*
-		for(int i = 1; i < 10; i++) {
+		
+		/*for(int i = 1; i < 10; i++) {
 			charbtn[i].setEnabled(false);
 		} //처음에 캐릭터 아지르 제외 비활성화
-		*/
-		if(phase == 2) {
+		
+		/if(phase == 2) {
 			charbtn[1].setEnabled(true);
 		} //phase 가 2가 되면 라이즈 해금, 순차적임
 		if(phase == 3) {
@@ -75,60 +78,49 @@ public class charSel extends JPanel {
 		}
 		if(phase == 10) {
 			charbtn[9].setEnabled(true);
-		}
+		}*/
 
-		/*char1.setOpaque(false);
-		char1.setContentAreaFilled(false);
-		char1.setBorderPainted(false);*/
 		
 		for(int i = 0; i < 10; i++) {
 			charbtn[i].addActionListener(new StartListener());	
+			}
 		}
-	}
 	
 	class StartListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == charbtn[0]) {
-				ch.mainGame = new mainGame(ch); //이 때 메인게임 객체를 만들어줘야 초상화가 잘 반영됨
 			}
 			else if (e.getSource() == charbtn[1]) {
-				ch.charSel.charidx = 1;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 1;
 			}
 			else if (e.getSource() == charbtn[2]) {
-				ch.charSel.charidx = 2;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 2;
 			}
 			else if (e.getSource() == charbtn[3]) {
-				ch.charSel.charidx = 3;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 3;
 			}
 			else if (e.getSource() == charbtn[4]) {
-				ch.charSel.charidx = 4;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 4;
 			}
 			else if (e.getSource() == charbtn[5]) {
-				ch.charSel.charidx = 5;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 5; 
 			}
 			else if (e.getSource() == charbtn[6]) {
-				ch.charSel.charidx = 6;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 6;
 			}
 			else if (e.getSource() == charbtn[7]) {
-				ch.charSel.charidx = 7;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 7;		 
 			}
 			else if (e.getSource() == charbtn[8]) {
-				ch.charSel.charidx = 8;
-				ch.mainGame = new mainGame(ch);
+				ch.fightSel.charidx = 8;				
 			}
 			else if (e.getSource() == charbtn[9]) {
-				ch.charSel.charidx = 9;
-				ch.mainGame = new mainGame(ch); 
+				ch.fightSel.charidx = 9;				
 			}
-			
-			ch.change("tomainGame");
+			ch.stagePanel = new stagePanel(ch);
+			ch.change("tostagePanel");
 		}
 	}
 }
+
+

@@ -30,35 +30,32 @@ public class mainGame extends JPanel {
 		setLayout(null);
 		this.ch = ch;
 		if(ch.charSel.charidx == 0) {
-			Azir azir = new Azir();
-			HP_value = azir.HP;
-			MP_value = azir.MP;
-			MoveSpeed_value = azir.MoveSpeed;
-			AttackSpeed_value = azir.AttackSpeed;
-			AttackDamage_value = azir.AttackDamage;
-			Defense_value = azir.Defense;
+			HP_value = ch.azir.HP;
+			MP_value = ch.azir.MP;
+			MoveSpeed_value = ch.azir.MoveSpeed;
+			AttackSpeed_value = ch.azir.AttackSpeed;
+			AttackDamage_value = ch.azir.AttackDamage;
+			Defense_value = ch.azir.Defense;
 					
 		}
 
 		else if(ch.charSel.charidx == 1) {
-			Ryze ryze = new Ryze();
-			HP_value = ryze.HP;
-			MP_value = ryze.MP;
-			MoveSpeed_value = ryze.MoveSpeed;
-			AttackSpeed_value = ryze.AttackSpeed;
-			AttackDamage_value = ryze.AttackDamage;
-			Defense_value = ryze.Defense;
+			HP_value = ch.ryze.HP;
+			MP_value = ch.ryze.MP;
+			MoveSpeed_value = ch.ryze.MoveSpeed;
+			AttackSpeed_value = ch.ryze.AttackSpeed;
+			AttackDamage_value = ch.ryze.AttackDamage;
+			Defense_value = ch.ryze.Defense;
 					
 		}
 		
 		else if(ch.charSel.charidx == 2) {
-			Akali akali = new Akali();
-			HP_value = akali.HP;
-			MP_value = akali.MP;
-			MoveSpeed_value = akali.MoveSpeed;
-			AttackSpeed_value = akali.AttackSpeed;
-			AttackDamage_value = akali.AttackDamage;
-			Defense_value = akali.Defense;
+			HP_value = ch.akali.HP;
+			MP_value = ch.akali.MP;
+			MoveSpeed_value = ch.akali.MoveSpeed;
+			AttackSpeed_value = ch.akali.AttackSpeed;
+			AttackDamage_value = ch.akali.AttackDamage;
+			Defense_value = ch.akali.Defense;
 					
 		}
 		
@@ -167,6 +164,18 @@ public class mainGame extends JPanel {
 		add(AttackSpeed);
 		add(AttackDamage);
 		add(Defense);
+		Button1.addActionListener(new ButtonListener());
+		Button1.setToolTipText("툴팁은 이렇게 하는거다");
+		
+	}
+	class ButtonListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			if (e.getSource() == Button1) {
+				ch.fightSel = new fightSel(ch);
+				ch.change("tofightSel");
+				
+			}
+		}
 	}
 
 }
