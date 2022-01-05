@@ -7,6 +7,7 @@ import java.awt.event.*;
 
 public class mainGame extends JPanel {
 	private PanelChange ch;
+	public int test = 1;
 	public JLabel charPortrait = new JLabel();
 	public JButton Button1;
 	public JButton Button2;
