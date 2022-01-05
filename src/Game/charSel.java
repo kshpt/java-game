@@ -44,11 +44,11 @@ public class charSel extends JPanel {
 			add(charbtn[i]);
 			add(charlb[i]);
 		}
-		
+		/*
 		for(int i = 1; i < 10; i++) {
 			charbtn[i].setEnabled(false);
 		} //처음에 캐릭터 아지르 제외 비활성화
-		
+		*/
 		if(phase == 2) {
 			charbtn[1].setEnabled(true);
 		} //phase 가 2가 되면 라이즈 해금, 순차적임

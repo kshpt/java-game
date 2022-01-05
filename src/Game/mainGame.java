@@ -39,6 +39,7 @@ public class mainGame extends JPanel {
 			Defense_value = azir.Defense;
 					
 		}
+
 		else if(ch.charSel.charidx == 1) {
 			Ryze ryze = new Ryze();
 			HP_value = ryze.HP;
@@ -49,6 +50,86 @@ public class mainGame extends JPanel {
 			Defense_value = ryze.Defense;
 					
 		}
+		
+		else if(ch.charSel.charidx == 2) {
+			Akali akali = new Akali();
+			HP_value = akali.HP;
+			MP_value = akali.MP;
+			MoveSpeed_value = akali.MoveSpeed;
+			AttackSpeed_value = akali.AttackSpeed;
+			AttackDamage_value = akali.AttackDamage;
+			Defense_value = akali.Defense;
+					
+		}
+		
+		else if(ch.charSel.charidx == 3) {
+			Yone yone = new Yone();
+			HP_value = yone.HP;
+			MP_value = yone.MP;
+			MoveSpeed_value = yone.MoveSpeed;
+			AttackSpeed_value = yone.AttackSpeed;
+			AttackDamage_value = yone.AttackDamage;
+			Defense_value = yone.Defense;
+					
+		}
+		
+		else if(ch.charSel.charidx == 4) {
+			Yasuo yasuo = new Yasuo();
+			HP_value = yasuo.HP;
+			MP_value = yasuo.MP;
+			MoveSpeed_value = yasuo.MoveSpeed;
+			AttackSpeed_value = yasuo.AttackSpeed;
+			AttackDamage_value = yasuo.AttackDamage;
+			Defense_value = yasuo.Defense;
+					
+		}
+		
+		else if(ch.charSel.charidx == 5) {
+			Sylas sylas = new Sylas();
+			HP_value = sylas.HP;
+			MP_value = sylas.MP;
+			MoveSpeed_value = sylas.MoveSpeed;
+			AttackSpeed_value = sylas.AttackSpeed;
+			AttackDamage_value = sylas.AttackDamage;
+			Defense_value = sylas.Defense;
+					
+		}
+		
+		//¸£ºí¶û Ä­
+		
+		else if(ch.charSel.charidx == 7) {
+			Vex vex = new Vex();
+			HP_value = vex.HP;
+			MP_value = vex.MP;
+			MoveSpeed_value = vex.MoveSpeed;
+			AttackSpeed_value = vex.AttackSpeed;
+			AttackDamage_value = vex.AttackDamage;
+			Defense_value = vex.Defense;
+					
+		}
+		
+		else if(ch.charSel.charidx == 8) {
+			Zed zed = new Zed();
+			HP_value = zed.HP;
+			MP_value = zed.MP;
+			MoveSpeed_value = zed.MoveSpeed;
+			AttackSpeed_value = zed.AttackSpeed;
+			AttackDamage_value = zed.AttackDamage;
+			Defense_value = zed.Defense;
+					
+		}
+		
+		else if(ch.charSel.charidx == 9) {
+			Viktor viktor = new Viktor();
+			HP_value = viktor.HP;
+			MP_value = viktor.MP;
+			MoveSpeed_value = viktor.MoveSpeed;
+			AttackSpeed_value = viktor.AttackSpeed;
+			AttackDamage_value = viktor.AttackDamage;
+			Defense_value = viktor.Defense;
+					
+		}
+
 		charPortrait.setIcon(ch.charSel.charImg[ch.charSel.charidx]);
 		charPortrait.setBounds(190, 100, 100, 100);
 		GOLD = new JLabel("GOLD : " + GOLD_value);

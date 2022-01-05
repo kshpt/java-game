@@ -6,5 +6,5 @@ public class Azir {
 	public int MoveSpeed = 335;
 	public int AttackSpeed = 1; //공속은 아지르 기준 1로 설정
 	public int AttackDamage = 52; //주문력과 공격력은 공격력으로 통일
-	public int Defense= 20; //방어력과 마저도 방어력으로 통일, 방어력은 방 + 마저 평균값
+	public int Defense = 20; //방어력과 마저도 방어력으로 통일, 방어력은 방 + 마저 평균값
 }
