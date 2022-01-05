@@ -9,7 +9,7 @@ public class charSel extends JPanel {
 	private JButton[] charbtn = new JButton[10];
 	public JLabel[] charlb = new JLabel[10];
 	public ImageIcon[] charImg =new ImageIcon[10];
-	public int phase = 1; //현재 단계(캐릭터 보유 개수)
+	public int phase = 2; //현재 단계(캐릭터 보유 개수)
 	public int charidx = 0;
 
 	

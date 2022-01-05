@@ -17,22 +17,38 @@ public class mainGame extends JPanel {
 	public JLabel MoveSpeed;
 	public JLabel AttackSpeed;
 	public JLabel AttackDamage;
-	public JLabel AbilityPower;
 	public JLabel Defense;
-	public JLabel MagicDefense;
-	public int GOLD_value = 100;
-	public int HP_value = 100;
-	public int MP_value = 100;
-	public int MoveSpeed_value = 100;
-	public int AttackSpeed_value = 100;
-	public int AttackDamage_value = 100;
-	public int AbilityPower_value = 100;
-	public int Defense_value = 100;
-	public int MagicDefense_value = 100;
+	public int GOLD_value = 500;
+	public int HP_value;
+	public int MP_value;
+	public int MoveSpeed_value;
+	public int AttackSpeed_value;
+	public int AttackDamage_value;
+	public int Defense_value;
 	
 	public mainGame(PanelChange ch) {
 		setLayout(null);
 		this.ch = ch;
+		if(ch.charSel.charidx == 0) {
+			Azir azir = new Azir();
+			HP_value = azir.HP;
+			MP_value = azir.MP;
+			MoveSpeed_value = azir.MoveSpeed;
+			AttackSpeed_value = azir.AttackSpeed;
+			AttackDamage_value = azir.AttackDamage;
+			Defense_value = azir.Defense;
+					
+		}
+		else if(ch.charSel.charidx == 1) {
+			Ryze ryze = new Ryze();
+			HP_value = ryze.HP;
+			MP_value = ryze.MP;
+			MoveSpeed_value = ryze.MoveSpeed;
+			AttackSpeed_value = ryze.AttackSpeed;
+			AttackDamage_value = ryze.AttackDamage;
+			Defense_value = ryze.Defense;
+					
+		}
 		charPortrait.setIcon(ch.charSel.charImg[ch.charSel.charidx]);
 		charPortrait.setBounds(190, 100, 100, 100);
 		GOLD = new JLabel("GOLD : " + GOLD_value);
@@ -43,18 +59,14 @@ public class mainGame extends JPanel {
 		MoveSpeed = new JLabel("ÀÌµ¿¼Óµµ : " + MoveSpeed_value);
 		AttackSpeed = new JLabel("°ø°Ý¼Óµµ : " + AttackSpeed_value);
 		AttackDamage = new JLabel("AD : " + AttackDamage_value);
-		AbilityPower = new JLabel("AP : " + AbilityPower_value);
 		Defense = new JLabel("¹æ¾î·Â : " + Defense_value);
-		MagicDefense = new JLabel("¸¶¹ý¹æ¾î·Â : " + MagicDefense_value);
 		GOLD.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		HP.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		MP.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		MoveSpeed.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		AttackSpeed.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		AttackDamage.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
-		AbilityPower.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		Defense.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
-		MagicDefense.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 		Button1.setBounds(800, 100, 200, 50);
 		Button2.setBounds(800, 200, 200, 50);
 		GOLD.setBounds(190, 200, 200, 50);
@@ -63,9 +75,7 @@ public class mainGame extends JPanel {
 		MoveSpeed.setBounds(350, 200, 200, 50);
 		AttackSpeed.setBounds(350, 250, 200, 50);
 		AttackDamage.setBounds(350, 300, 200, 50);
-		AbilityPower.setBounds(350, 350, 200, 50);
-		Defense.setBounds(350, 400, 200, 50);
-		MagicDefense.setBounds(350, 450, 200, 50);
+		Defense.setBounds(350, 350, 200, 50);
 		add(Button1);
 		add(Button2);
 		add(charPortrait);
@@ -75,9 +85,7 @@ public class mainGame extends JPanel {
 		add(MoveSpeed);
 		add(AttackSpeed);
 		add(AttackDamage);
-		add(AbilityPower);
 		add(Defense);
-		add(MagicDefense);
 	}
 
 }
