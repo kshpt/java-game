@@ -72,7 +72,46 @@ public class Char {
 	public void AD() { //스킬 매소드 내부에서 챔피언에 따른 선택문을 분기하여 구현
 			if(ch.charSel.charidx == 0) {
 				//이곳에 아지르 평타 구현
+				ch.stagePanel.enemy_HP_value -= 52;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			}
+			else if(ch.charSel.charidx == 1) {
+				ch.stagePanel.enemy_HP_value -= 58;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			else if(ch.charSel.charidx == 2) {
+				ch.stagePanel.enemy_HP_value -= 62;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			else if(ch.charSel.charidx == 3) {
+				ch.stagePanel.enemy_HP_value -= 60;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			else if(ch.charSel.charidx == 4) {
+				ch.stagePanel.enemy_HP_value -= 60;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			else if(ch.charSel.charidx == 5) {
+				ch.stagePanel.enemy_HP_value -= 61;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			/*else if(ch.charSel.charidx == 6) {
+				ch.stagePanel.enemy_HP_value -= 58;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}*/
+			else if(ch.charSel.charidx == 7) {
+				ch.stagePanel.enemy_HP_value -= 54;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			else if(ch.charSel.charidx == 8) {
+				ch.stagePanel.enemy_HP_value -= 54;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			else if(ch.charSel.charidx == 9) {
+				ch.stagePanel.enemy_HP_value -= 53;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+			}
+			
 	}
 	public void Q() {
 			

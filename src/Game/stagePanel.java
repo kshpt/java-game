@@ -182,7 +182,9 @@ public class stagePanel extends JPanel {
 	//스킬 버튼과 연결되는 리스너
 	class ADListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			
+			if(e.getSource() == AD) {
+				ch.myChar.AD();
+			}
 		}
 	}
 }
