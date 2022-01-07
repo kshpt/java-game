@@ -6,6 +6,9 @@ import java.awt.event.*;
 
 public class stagePanel extends JPanel {
 	private PanelChange ch;
+	//전투 메세지 출력
+	public JTextArea textarea = new JTextArea();
+	public int textCount = 0;
 	//초상화
 	public JLabel myPort = new JLabel();
 	public JLabel enemyPort = new JLabel();
@@ -177,7 +180,10 @@ public class stagePanel extends JPanel {
 		skillW.addActionListener(new ADListener());
 		skillE.addActionListener(new ADListener());
 		skillR.addActionListener(new ADListener());
-		
+		//전투 메세지
+		textarea.setBounds(450, 100, 400, 500);
+		add(textarea);
+		textarea.setEditable(false);			
 	}
 	//스킬 버튼과 연결되는 리스너
 	class ADListener implements ActionListener {

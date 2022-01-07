@@ -74,42 +74,103 @@ public class Char {
 				//이곳에 아지르 평타 구현
 				ch.stagePanel.enemy_HP_value -= 52;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("아지르가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 1) {
 				ch.stagePanel.enemy_HP_value -= 58;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("라이즈가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 2) {
 				ch.stagePanel.enemy_HP_value -= 62;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("아칼리가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 3) {
 				ch.stagePanel.enemy_HP_value -= 60;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("요네가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 4) {
 				ch.stagePanel.enemy_HP_value -= 60;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("야스오가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 5) {
 				ch.stagePanel.enemy_HP_value -= 61;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("사일러스가 평타 침\n");
 			}
 			/*else if(ch.charSel.charidx == 6) {
 				ch.stagePanel.enemy_HP_value -= 58;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("아지르가 평타 침\n");
 			}*/
 			else if(ch.charSel.charidx == 7) {
 				ch.stagePanel.enemy_HP_value -= 54;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("벡스가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 8) {
 				ch.stagePanel.enemy_HP_value -= 54;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("제드가 평타 침\n");
 			}
 			else if(ch.charSel.charidx == 9) {
 				ch.stagePanel.enemy_HP_value -= 53;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				if(ch.stagePanel.textCount == 28) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
+				ch.stagePanel.textarea.append("빅토르가 평타 침\n");
+			}
+			ch.stagePanel.textCount += 1;
+			if(ch.stagePanel.enemy_HP_value <= 0) {
+				ch.stagePanel.enemy_HP_value = 0;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				ch.stagePanel.textarea.setText("승리");
+				ch.stagePanel.AD.setEnabled(false);
+				ch.stagePanel.skillQ.setEnabled(false);
+				ch.stagePanel.skillW.setEnabled(false);
+				ch.stagePanel.skillE.setEnabled(false);
+				ch.stagePanel.skillR.setEnabled(false);		
 			}
 			
 	}
