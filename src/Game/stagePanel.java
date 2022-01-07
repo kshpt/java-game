@@ -191,6 +191,18 @@ public class stagePanel extends JPanel {
 			if(e.getSource() == AD) {
 				ch.myChar.AD();
 			}
-		}
+			else if(e.getSource() == skillQ) {
+				ch.myChar.Q();
+			}
+			else if(e.getSource() == skillW) {
+				ch.myChar.W();
+			}
+			else if(e.getSource() == skillE) {
+				ch.myChar.E();
+			}
+			else if(e.getSource() == skillR) {
+				ch.myChar.R();
+			}
+	}
 	}
 }
