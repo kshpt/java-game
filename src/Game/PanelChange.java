@@ -11,12 +11,7 @@ public class PanelChange extends JFrame {
 	public mainGame mainGame = null;
 	public fightSel fightSel = null;
 	public stagePanel stagePanel = null;
-	public Azir enemyAzir = null;
-	public Azir azir = null;
-	public Ryze enemyRyze = null;
-	public Ryze ryze = null;
-	public Akali enemyAkali = null;
-	public Akali akali = null;
+	public Char myChar = null;
 	
 	public void change(String panelName) {
 		if(panelName.equals("tocharSel")) {

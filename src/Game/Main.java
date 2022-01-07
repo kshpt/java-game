@@ -21,12 +21,7 @@ public class Main {
 		ch.startPanel = new startPanel(ch);
 		ch.charSel = new charSel(ch);
 		//mainGame °´Ã¼´Â Ä³¸¯ÅÍ¸¦ ¹Ù²Ü ¶§ ¸¶´Ù »ý±è
-		ch.enemyAzir = new Azir(ch);
-		ch.azir = new Azir(ch);
-		ch.enemyRyze = new Ryze(ch);
-		ch.ryze = new Ryze(ch);
-		ch.enemyAkali = new Akali(ch);
-		ch.akali = new Akali(ch);
+		ch.myChar = new Char(ch);
 		
 		
 		ch.add(ch.startPanel);

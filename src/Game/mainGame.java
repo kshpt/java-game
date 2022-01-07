@@ -7,7 +7,6 @@ import java.awt.event.*;
 
 public class mainGame extends JPanel {
 	private PanelChange ch;
-	public int test = 1;
 	public JLabel charPortrait = new JLabel();
 	public JButton Button1;
 	public JButton Button2;
@@ -30,103 +29,85 @@ public class mainGame extends JPanel {
 		setLayout(null);
 		this.ch = ch;
 		if(ch.charSel.charidx == 0) {
-			HP_value = ch.azir.HP;
-			MP_value = ch.azir.MP;
-			MoveSpeed_value = ch.azir.MoveSpeed;
-			AttackSpeed_value = ch.azir.AttackSpeed;
-			AttackDamage_value = ch.azir.AttackDamage;
-			Defense_value = ch.azir.Defense;
-					
+			HP_value = ch.myChar.Azir_HP;
+			MP_value = ch.myChar.Azir_MP;
+			MoveSpeed_value = ch.myChar.Azir_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Azir_AttackSpeed;
+			AttackDamage_value = ch.myChar.Azir_AttackDamage;
+			Defense_value = ch.myChar.Azir_Defense;
 		}
-
 		else if(ch.charSel.charidx == 1) {
-			HP_value = ch.ryze.HP;
-			MP_value = ch.ryze.MP;
-			MoveSpeed_value = ch.ryze.MoveSpeed;
-			AttackSpeed_value = ch.ryze.AttackSpeed;
-			AttackDamage_value = ch.ryze.AttackDamage;
-			Defense_value = ch.ryze.Defense;
-					
+			HP_value = ch.myChar.Ryze_HP;
+			MP_value = ch.myChar.Ryze_MP;
+			MoveSpeed_value = ch.myChar.Ryze_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Ryze_AttackSpeed;
+			AttackDamage_value = ch.myChar.Ryze_AttackDamage;
+			Defense_value = ch.myChar.Ryze_Defense;
 		}
-		
 		else if(ch.charSel.charidx == 2) {
-			HP_value = ch.akali.HP;
-			MP_value = ch.akali.MP;
-			MoveSpeed_value = ch.akali.MoveSpeed;
-			AttackSpeed_value = ch.akali.AttackSpeed;
-			AttackDamage_value = ch.akali.AttackDamage;
-			Defense_value = ch.akali.Defense;
-					
+			HP_value = ch.myChar.Akail_HP;
+			MP_value = ch.myChar.Akail_MP;
+			MoveSpeed_value = ch.myChar.Akail_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Akail_AttackSpeed;
+			AttackDamage_value = ch.myChar.Akail_AttackDamage;
+			Defense_value = ch.myChar.Akail_Defense;
 		}
-		
 		else if(ch.charSel.charidx == 3) {
-			Yone yone = new Yone();
-			HP_value = yone.HP;
-			MP_value = yone.MP;
-			MoveSpeed_value = yone.MoveSpeed;
-			AttackSpeed_value = yone.AttackSpeed;
-			AttackDamage_value = yone.AttackDamage;
-			Defense_value = yone.Defense;
-					
+			HP_value = ch.myChar.Yone_HP;
+			MP_value = ch.myChar.Yone_MP;
+			MoveSpeed_value = ch.myChar.Yone_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Yone_AttackSpeed;
+			AttackDamage_value = ch.myChar.Yone_AttackDamage;
+			Defense_value = ch.myChar.Yone_Defense;
 		}
-		
 		else if(ch.charSel.charidx == 4) {
-			Yasuo yasuo = new Yasuo();
-			HP_value = yasuo.HP;
-			MP_value = yasuo.MP;
-			MoveSpeed_value = yasuo.MoveSpeed;
-			AttackSpeed_value = yasuo.AttackSpeed;
-			AttackDamage_value = yasuo.AttackDamage;
-			Defense_value = yasuo.Defense;
-					
+			HP_value = ch.myChar.Yasuo_HP;
+			MP_value = ch.myChar.Yasuo_MP;
+			MoveSpeed_value = ch.myChar.Yasuo_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Yasuo_AttackSpeed;
+			AttackDamage_value = ch.myChar.Yasuo_AttackDamage;
+			Defense_value = ch.myChar.Yasuo_Defense;
 		}
-		
 		else if(ch.charSel.charidx == 5) {
-			Sylas sylas = new Sylas();
-			HP_value = sylas.HP;
-			MP_value = sylas.MP;
-			MoveSpeed_value = sylas.MoveSpeed;
-			AttackSpeed_value = sylas.AttackSpeed;
-			AttackDamage_value = sylas.AttackDamage;
-			Defense_value = sylas.Defense;
-					
+			HP_value = ch.myChar.Sylas_HP;
+			MP_value = ch.myChar.Sylas_MP;
+			MoveSpeed_value = ch.myChar.Sylas_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Sylas_AttackSpeed;
+			AttackDamage_value = ch.myChar.Sylas_AttackDamage;
+			Defense_value = ch.myChar.Sylas_Defense;
 		}
-		
-		//¸£ºí¶û Ä­
-		
+		/*else if(ch.charSel.charidx == 6) {
+			HP_value = ch.myChar.Azir_HP;
+			MP_value = ch.myChar.Azir_MP;
+			MoveSpeed_value = ch.myChar.Azir_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Azir_AttackSpeed;
+			AttackDamage_value = ch.myChar.Azir_AttackDamage;
+			Defense_value = ch.myChar.Azir_Defense;
+		}*/
 		else if(ch.charSel.charidx == 7) {
-			Vex vex = new Vex();
-			HP_value = vex.HP;
-			MP_value = vex.MP;
-			MoveSpeed_value = vex.MoveSpeed;
-			AttackSpeed_value = vex.AttackSpeed;
-			AttackDamage_value = vex.AttackDamage;
-			Defense_value = vex.Defense;
-					
+			HP_value = ch.myChar.Vex_HP;
+			MP_value = ch.myChar.Vex_MP;
+			MoveSpeed_value = ch.myChar.Vex_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Vex_AttackSpeed;
+			AttackDamage_value = ch.myChar.Vex_AttackDamage;
+			Defense_value = ch.myChar.Vex_Defense;
 		}
-		
 		else if(ch.charSel.charidx == 8) {
-			Zed zed = new Zed();
-			HP_value = zed.HP;
-			MP_value = zed.MP;
-			MoveSpeed_value = zed.MoveSpeed;
-			AttackSpeed_value = zed.AttackSpeed;
-			AttackDamage_value = zed.AttackDamage;
-			Defense_value = zed.Defense;
-					
+			HP_value = ch.myChar.Zed_HP;
+			MP_value = ch.myChar.Zed_MP;
+			MoveSpeed_value = ch.myChar.Zed_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Zed_AttackSpeed;
+			AttackDamage_value = ch.myChar.Zed_AttackDamage;
+			Defense_value = ch.myChar.Zed_Defense;
 		}
-		
 		else if(ch.charSel.charidx == 9) {
-			Viktor viktor = new Viktor();
-			HP_value = viktor.HP;
-			MP_value = viktor.MP;
-			MoveSpeed_value = viktor.MoveSpeed;
-			AttackSpeed_value = viktor.AttackSpeed;
-			AttackDamage_value = viktor.AttackDamage;
-			Defense_value = viktor.Defense;
-					
+			HP_value = ch.myChar.Viktor_HP;
+			MP_value = ch.myChar.Viktor_MP;
+			MoveSpeed_value = ch.myChar.Viktor_MoveSpeed;
+			AttackSpeed_value = ch.myChar.Viktor_AttackSpeed;
+			AttackDamage_value = ch.myChar.Viktor_AttackDamage;
+			Defense_value = ch.myChar.Viktor_Defense;
 		}
-
 		charPortrait.setIcon(ch.charSel.charImg[ch.charSel.charidx]);
 		charPortrait.setBounds(190, 100, 100, 100);
 		GOLD = new JLabel("GOLD : " + GOLD_value);
@@ -165,7 +146,6 @@ public class mainGame extends JPanel {
 		add(AttackDamage);
 		add(Defense);
 		Button1.addActionListener(new ButtonListener());
-		Button1.setToolTipText("ÅøÆÁÀº ÀÌ·¸°Ô ÇÏ´Â°Å´Ù");
 		
 	}
 	class ButtonListener implements ActionListener {

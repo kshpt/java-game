@@ -12,6 +12,7 @@ public class charSel extends JPanel {
 	public int phase = 2; //현재 단계(캐릭터 보유 개수)
 	public int charidx = 0;
 
+
 	
 	public charSel(PanelChange ch) {
 		this.ch = ch;
@@ -101,7 +102,7 @@ public class charSel extends JPanel {
 			}
 			else if (e.getSource() == charbtn[3]) {
 				ch.charSel.charidx = 3;
-				ch.mainGame = new mainGame(ch); 
+				ch.mainGame = new mainGame(ch);
 			}
 			else if (e.getSource() == charbtn[4]) {
 				ch.charSel.charidx = 4;
@@ -127,7 +128,6 @@ public class charSel extends JPanel {
 				ch.charSel.charidx = 9;
 				ch.mainGame = new mainGame(ch); 
 			}
-			
 			ch.change("tomainGame");
 		}
 	}
