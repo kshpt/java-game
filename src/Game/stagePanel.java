@@ -41,6 +41,8 @@ public class stagePanel extends JPanel {
 	public JLabel myDefense;
 	//상대 캐릭터 스텟 표시
 	public JLabel enemyHP;
+	//턴 넘기는 변수
+	public int gameTurn = 1;
 	
 	public stagePanel(PanelChange ch) {
 		setLayout(null);
@@ -183,26 +185,82 @@ public class stagePanel extends JPanel {
 		//전투 메세지
 		textarea.setBounds(450, 100, 400, 500);
 		add(textarea);
-		textarea.setEditable(false);			
+		textarea.setEditable(false);		
+		
+	
+		
 	}
 	//스킬 버튼과 연결되는 리스너
 	class ADListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == AD) {
 				ch.myChar.AD();
+				gameTurn += 1; //스킬을 사용했다면 상대의 턴
+				if(ch.stagePanel.enemy_HP_value > 0) {
+					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
+						ch.myChar.enemyAD();
+						gameTurn += 1;
+						
+					}
+				}
 			}
 			else if(e.getSource() == skillQ) {
 				ch.myChar.Q();
+				gameTurn += 1;
+				if(ch.stagePanel.enemy_HP_value > 0) {
+					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
+						ch.myChar.enemyAD();
+						gameTurn += 1;
+						
+					}
+				}
 			}
 			else if(e.getSource() == skillW) {
 				ch.myChar.W();
+				gameTurn += 1;
+				if(ch.stagePanel.enemy_HP_value > 0) {
+					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
+						ch.myChar.enemyAD();
+						gameTurn += 1;
+						
+					}
+				}
 			}
 			else if(e.getSource() == skillE) {
 				ch.myChar.E();
+				gameTurn += 1;
+				if(ch.stagePanel.enemy_HP_value > 0) {
+					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
+						ch.myChar.enemyAD();
+						gameTurn += 1;
+						
+					}
+				}
 			}
 			else if(e.getSource() == skillR) {
 				ch.myChar.R();
+				gameTurn += 1;
+				if(ch.stagePanel.enemy_HP_value > 0) {
+					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
+						ch.myChar.enemyAD();
+						gameTurn += 1;
+						
+					}
+				}
 			}
+		}
 	}
-	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
