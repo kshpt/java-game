@@ -76,9 +76,9 @@ public class Char {
 	public void AD() { //스킬 매소드 내부에서 챔피언에 따른 선택문을 분기하여 구현
 			if(ch.charSel.charidx == 0) {
 				//이곳에 아지르 평타 구현
-				ch.stagePanel.enemy_HP_value -= 52;
+				ch.stagePanel.enemy_HP_value -= Azir_AttackDamage;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -87,7 +87,7 @@ public class Char {
 			else if(ch.charSel.charidx == 1) {
 				ch.stagePanel.enemy_HP_value -= 58;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -96,7 +96,7 @@ public class Char {
 			else if(ch.charSel.charidx == 2) {
 				ch.stagePanel.enemy_HP_value -= 62;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -105,7 +105,7 @@ public class Char {
 			else if(ch.charSel.charidx == 3) {
 				ch.stagePanel.enemy_HP_value -= 60;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -114,7 +114,7 @@ public class Char {
 			else if(ch.charSel.charidx == 4) {
 				ch.stagePanel.enemy_HP_value -= 60;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -123,7 +123,7 @@ public class Char {
 			else if(ch.charSel.charidx == 5) {
 				ch.stagePanel.enemy_HP_value -= 61;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -132,7 +132,7 @@ public class Char {
 			/*else if(ch.charSel.charidx == 6) {
 				ch.stagePanel.enemy_HP_value -= 58;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -141,7 +141,7 @@ public class Char {
 			else if(ch.charSel.charidx == 7) {
 				ch.stagePanel.enemy_HP_value -= 54;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -150,7 +150,7 @@ public class Char {
 			else if(ch.charSel.charidx == 8) {
 				ch.stagePanel.enemy_HP_value -= 54;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -159,7 +159,7 @@ public class Char {
 			else if(ch.charSel.charidx == 9) {
 				ch.stagePanel.enemy_HP_value -= 53;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-				if(ch.stagePanel.textCount == 28) {
+				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
 					ch.stagePanel.textCount = 0;
 				}
@@ -190,17 +190,21 @@ public class Char {
 	public void Q() {
 		if(ch.charSel.charidx == 0) {
 			ch.stagePanel.textarea.append("아지르가 사막의 맹습 사용\n");
-			if(ch.stagePanel.MP_value >= 100) {
+			if(ch.stagePanel.MP_value >= 55) {
 				ch.stagePanel.enemy_HP_value -= 70;
-				ch.stagePanel.MP_value -= 100;
+				ch.stagePanel.MP_value -= 55;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 				ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);	
 			}
-			else if(ch.stagePanel.MP_value < 100) {
+			else if(ch.stagePanel.MP_value < 55) {
 				ch.stagePanel.textarea.append("그러나 마나 부족!\n");
+				if(ch.stagePanel.textCount == 14) {
+					ch.stagePanel.textarea.setText("");
+					ch.stagePanel.textCount = 0;
+				}
 				ch.stagePanel.gameTurn -= 1;
 			}
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -210,7 +214,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 40;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -221,7 +225,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 130;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -232,7 +236,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 0;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -243,7 +247,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 0;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -254,7 +258,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 55;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -267,13 +271,17 @@ public class Char {
 			else {
 				ch.stagePanel.textarea.append("사슬 후려치기 2타 빗나감!\n");
 			}
+			if(ch.stagePanel.textCount == 14) {
+				ch.stagePanel.textarea.setText("");
+				ch.stagePanel.textCount = 0;
+			}
 		}
 		/*else if(ch.charSel.charidx == 6) {
 			ch.stagePanel.enemy_HP_value -= 70;
 			ch.stagePanel.MP_value -= 55;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-						if(ch.stagePanel.textCount == 28) {
+						if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -284,7 +292,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 40;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -295,7 +303,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 75;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -306,7 +314,7 @@ public class Char {
 			ch.stagePanel.MP_value -= 45;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -327,22 +335,26 @@ public class Char {
 		}
 	}	
 	public void W() {
-		  /*if(ch.charSel.charidx == 0) {
-			ch.stagePanel.enemy_HP_value -= 52;
-			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-			if(ch.stagePanel.textCount == 28) {
+		  if(ch.charSel.charidx == 0) {
+			  ch.stagePanel.MP_value -= 40;
+			  ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
+			  ch.stagePanel.AttackDamage_value += 50;
+			  if(ch.stagePanel.gameTurn % 6 == 1) {
+				  ch.stagePanel.AttackDamage_value = Azir_AttackDamage;
+			  }
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
-			ch.stagePanel.textarea.append("아지르는 w 구현 안함\n");
-		}*/
+			ch.stagePanel.textarea.append("아지르가 일어나라! 사용\n");
+		}
 		if(ch.charSel.charidx == 1) {
 			ch.stagePanel.enemy_HP_value -= 80;
 			ch.stagePanel.enemy_MoveSpeed_value -= 1; //둔화 적용(수치는 임시), e 사용 시 조건부 속박은 미구현
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			ch.stagePanel.MP_value -= 40;
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -354,8 +366,8 @@ public class Char {
 			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
 			ch.stagePanel.MoveSpeed_value += 1;
 			ch.stagePanel.myMoveSpeed.setText("이속 : " + ch.stagePanel.MoveSpeed_value);
-			//상한선은 280으로 되도록
-			if(ch.stagePanel.textCount == 28) {
+			//상한선은 140으로 되도록
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -365,7 +377,7 @@ public class Char {
 			ch.stagePanel.enemy_HP_value -= (10 + ch.stagePanel.enemy_HP_value * 11 / 100);
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			//방어막 구현은 나중에
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -375,7 +387,7 @@ public class Char {
 			ch.stagePanel.enemy_HP_value -= 52;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 			//장막 구현은 나중에
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -403,7 +415,7 @@ public class Char {
 				}
 			}
 			ch.stagePanel.myHP.setText("HP : " + ch.stagePanel.HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -412,7 +424,7 @@ public class Char {
 		/*else if(ch.charSel.charidx == 6) {
 			ch.stagePanel.enemy_HP_value -= 52;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -421,7 +433,7 @@ public class Char {
 		else if(ch.charSel.charidx == 7) {
 			ch.stagePanel.enemy_HP_value -= 52;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -430,7 +442,7 @@ public class Char {
 		else if(ch.charSel.charidx == 8) {
 			ch.stagePanel.enemy_HP_value -= 52;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -439,7 +451,7 @@ public class Char {
 		else if(ch.charSel.charidx == 9) {
 			ch.stagePanel.enemy_HP_value -= 52;
 			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -466,7 +478,7 @@ public class Char {
 		if(ch.fightSel.charidx == 0) {
 			ch.stagePanel.HP_value -= 52;
 			ch.stagePanel.myHP.setText("HP : " + ch.stagePanel.HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
@@ -475,7 +487,7 @@ public class Char {
 		else if(ch.fightSel.charidx == 1) {
 			ch.stagePanel.HP_value -= 58;
 			ch.stagePanel.myHP.setText("HP : " + ch.stagePanel.HP_value);
-			if(ch.stagePanel.textCount == 28) {
+			if(ch.stagePanel.textCount == 14) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}

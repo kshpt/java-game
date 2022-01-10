@@ -199,6 +199,10 @@ public class stagePanel extends JPanel {
 				if(ch.stagePanel.enemy_HP_value > 0) {
 					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
 						ch.myChar.enemyAD();
+						if(ch.stagePanel.textCount == 14) {
+							ch.stagePanel.textarea.setText("");
+							ch.stagePanel.textCount = 0;
+						}
 						gameTurn += 1;
 						
 					}
@@ -210,6 +214,10 @@ public class stagePanel extends JPanel {
 				if(ch.stagePanel.enemy_HP_value > 0) {
 					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
 						ch.myChar.enemyAD();
+						if(ch.stagePanel.textCount == 14) {
+							ch.stagePanel.textarea.setText("");
+							ch.stagePanel.textCount = 0;
+						}
 						gameTurn += 1;
 						
 					}
@@ -221,6 +229,10 @@ public class stagePanel extends JPanel {
 				if(ch.stagePanel.enemy_HP_value > 0) {
 					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
 						ch.myChar.enemyAD();
+						if(ch.stagePanel.textCount == 14) {
+							ch.stagePanel.textarea.setText("");
+							ch.stagePanel.textCount = 0;
+						}
 						gameTurn += 1;
 						
 					}
@@ -232,6 +244,10 @@ public class stagePanel extends JPanel {
 				if(ch.stagePanel.enemy_HP_value > 0) {
 					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
 						ch.myChar.enemyAD();
+						if(ch.stagePanel.textCount == 14) {
+							ch.stagePanel.textarea.setText("");
+							ch.stagePanel.textCount = 0;
+						}
 						gameTurn += 1;
 						
 					}
@@ -243,6 +259,10 @@ public class stagePanel extends JPanel {
 				if(ch.stagePanel.enemy_HP_value > 0) {
 					if(gameTurn % 2 == 0) { //게임턴이 짝수 즉, 내가 스킬을 1회 썼다면	
 						ch.myChar.enemyAD();
+						if(ch.stagePanel.textCount == 14) {
+							ch.stagePanel.textarea.setText("");
+							ch.stagePanel.textCount = 0;
+						}
 						gameTurn += 1;
 						
 					}
