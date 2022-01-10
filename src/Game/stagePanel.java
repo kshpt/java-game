@@ -194,6 +194,9 @@ public class stagePanel extends JPanel {
 	class ADListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == AD) {
+				if((ch.stagePanel.gameTurn % 6 == 1) && (ch.stagePanel.gameTurn > 1)) {
+					ch.stagePanel.AttackDamage_value = ch.myChar.Azir_AttackDamage;
+				}
 				ch.myChar.AD();
 				gameTurn += 1; //스킬을 사용했다면 상대의 턴
 				if(ch.stagePanel.enemy_HP_value > 0) {
@@ -204,7 +207,6 @@ public class stagePanel extends JPanel {
 							ch.stagePanel.textCount = 0;
 						}
 						gameTurn += 1;
-						
 					}
 				}
 			}

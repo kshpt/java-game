@@ -76,7 +76,7 @@ public class Char {
 	public void AD() { //스킬 매소드 내부에서 챔피언에 따른 선택문을 분기하여 구현
 			if(ch.charSel.charidx == 0) {
 				//이곳에 아지르 평타 구현
-				ch.stagePanel.enemy_HP_value -= Azir_AttackDamage;
+				ch.stagePanel.enemy_HP_value -= ch.stagePanel.AttackDamage_value;
 				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
 				if(ch.stagePanel.textCount == 14) {
 					ch.stagePanel.textarea.setText("");
@@ -336,15 +336,12 @@ public class Char {
 	}	
 	public void W() {
 		  if(ch.charSel.charidx == 0) {
-			  ch.stagePanel.MP_value -= 40;
+			  ch.stagePanel.MP_value -= 40; //3턴 후 w 사라짐은 stagePanel에서 구현
 			  ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
-			  ch.stagePanel.AttackDamage_value += 50;
-			  if(ch.stagePanel.gameTurn % 6 == 1) {
-				  ch.stagePanel.AttackDamage_value = Azir_AttackDamage;
-			  }
-			if(ch.stagePanel.textCount == 14) {
-				ch.stagePanel.textarea.setText("");
-				ch.stagePanel.textCount = 0;
+			  ch.stagePanel.AttackDamage_value += 10;
+			 	if(ch.stagePanel.textCount == 14) {
+			 		ch.stagePanel.textarea.setText("");
+			 		ch.stagePanel.textCount = 0;
 			}
 			ch.stagePanel.textarea.append("아지르가 일어나라! 사용\n");
 		}
