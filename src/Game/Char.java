@@ -189,15 +189,21 @@ public class Char {
 	}
 	public void Q() {
 		if(ch.charSel.charidx == 0) {
-			ch.stagePanel.enemy_HP_value -= 70;
-			ch.stagePanel.MP_value -= 55;
-			ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
-			ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);
+			ch.stagePanel.textarea.append("아지르가 사막의 맹습 사용\n");
+			if(ch.stagePanel.MP_value >= 100) {
+				ch.stagePanel.enemy_HP_value -= 70;
+				ch.stagePanel.MP_value -= 100;
+				ch.stagePanel.enemyHP.setText("HP : " + ch.stagePanel.enemy_HP_value);
+				ch.stagePanel.myMP.setText("MP : " + ch.stagePanel.MP_value);	
+			}
+			else if(ch.stagePanel.MP_value < 100) {
+				ch.stagePanel.textarea.append("그러나 마나 부족!\n");
+				ch.stagePanel.gameTurn -= 1;
+			}
 			if(ch.stagePanel.textCount == 28) {
 				ch.stagePanel.textarea.setText("");
 				ch.stagePanel.textCount = 0;
 			}
-			ch.stagePanel.textarea.append("아지르가 사막의 맹습 사용\n");
 		}
 		else if(ch.charSel.charidx == 1) {
 			ch.stagePanel.enemy_HP_value -= 75;
